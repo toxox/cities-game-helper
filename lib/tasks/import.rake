@@ -9,7 +9,8 @@ task :import => [:environment] do
     City.create(
       country: row[0],
       region: row[1],
-      name: row[2]
+      name: row[2],
+      first_letter: row[2][0].downcase
     )
   end
 
