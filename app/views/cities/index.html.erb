@@ -1,4 +1,8 @@
 <h1>All cities</h1>
+<%= form_tag cities_path, :controller => 'cities' do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search" %>
+<% end %>
 <ul>
 <% @cities.each do |city| %>
   <li><%= link_to city.name, city %></li>
