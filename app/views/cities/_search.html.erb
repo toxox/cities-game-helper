@@ -1,5 +1,5 @@
-<%= form_tag cities_path, :controller => 'cities', :method => 'get' do %>
+<%= form_tag cities_path, :controller => 'cities', :method => 'get', class: 'input-control' do %>
   <%= text_field_tag :search, params[:search],
-    maxlength: 1, placeholder: "Enter a letter" %>
-  <%= submit_tag "Search" %>
+    maxlength: 1, placeholder: "Enter a letter...", class: 'form-control' %>
+  <%= submit_tag "Search", class: 'btn btn-primary btn-lg' %>
 <% end %>

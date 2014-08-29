@@ -1,3 +1,38 @@
 // Place all the styles related to the cities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.jumbotron {
+  text-align: center;
+  .input-control{
+    float: none;
+  }
+  .form-control {
+    width: 150px;
+    height: 45px;
+    display: inline-block;
+  }
+}
+
+body {
+  .input-control{
+  float: right;
+  }
+  .form-control {
+    width: 150px;
+    height: 45px;
+    display: inline-block;
+  }
+}
+
+.city {
+  text-align: center;
+  display: block;
+  margin-top: 60px;
+}
+
+input {
+  font-size: 12px;
+}
+
+
