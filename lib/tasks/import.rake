@@ -3,7 +3,7 @@ require 'csv'
 desc "Import cities from csv file"
 task :import => [:environment] do
 
-  file = "db/cities_test.csv"
+  file = "db/ukr_cities.csv"
 
   CSV.foreach(file, :headers => false) do |row|
     City.create(
