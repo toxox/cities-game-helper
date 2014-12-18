@@ -18,7 +18,7 @@ class Api::V1::CitiesController < ApplicationController
   def new
     @name = params[:name]
     @country = params[:country]
-    @first_letter = @name[0]
+    @first_letter = @name[0].downcase
 
     City.create(name: @name, country: @country, first_letter: @first_letter)
     redirect_to root_path
