@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      get "new_city" => 'cities#new'
       resources :cities, only: [:index, :show]
     end
   end

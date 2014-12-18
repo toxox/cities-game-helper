@@ -14,4 +14,13 @@ class Api::V1::CitiesController < ApplicationController
     @city = City.search(params[:search])
     respond_with City.find(params[:id])
   end
+
+  def new
+    @name = params[:name]
+    @country = params[:country]
+    @first_letter = @name[0]
+
+    City.create(name: @name, country: @country, first_letter: @first_letter)
+    redirect_to root_path
+  end
 end
